@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <h1>Mouse Hover Color Changer</h1>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        background-color: teal; 
+      }
+      h1 {
+        font-size: 400%;
+        padding-left: 250px;
+        color: aliceblue;
+      }
+      div {
+        display: flex;
+        /* display: grid; */
+        flex-wrap: wrap;
+        padding-left: 60px;
+        padding-top: 20px;
+      }
+      p {
+        height: 100px;
+        width: 140px;
+        /* background-color: aliceblue; */
+        border: 2px solid black;
+        margin: 18px;
+        border-radius: 16px;
+        outline: none;
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <script>
+      var par = document.getElementsByTagName("p");
+
+      for (let i = 0; i < par.length; i++) {
+        par[i].addEventListener("mouseover", (e) => {
+          par[i].style.backgroundColor =
+            "rgb(" +
+            Math.floor(Math.random() * 256) +
+            "," +
+            Math.floor(Math.random() * 256) +
+            "," +
+            Math.floor(Math.random() * 256) +
+            ")";
+        });
+      }
+    </script>
+  </body>
+</html>

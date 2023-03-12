@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        html{
+            font-size: 62.5%;
+        }
+        
+        #navigation{
+            margin: 0px;
+            display: flex;
+            background-color: aliceblue;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        
+        button{
+            border: none;
+            padding: 1rem;
+            font-size: 3rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: aqua;
+            background: green;
+            cursor: pointer;
+        }
+        
+        
+        
+        
+        main{
+            margin: 0px;
+            background-color: whitesmoke;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 2rem;
+            background-color: brown;
+            max-width: 60vw;
+            margin-left: 20vw;
+        }
+        
+        p{
+            background-color: black;
+            font-size: 2rem;
+            color: white;
+            border: 2px solid chocolate;
+            border-color: bisque;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: green;
+            width: 4rem;
+            height: 4rem;
+        }
+        </style>
+          
+    <nav id="navigation">
+        <button class="number btn" onclick="even()">Even</button>
+        <button class="number btn" onclick="odd()">Odd</button>
+    </nav>
+    <main>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </main>
+    <script>
+        function even(){
+            var even1 = document.getElementsByTagName("p");
+            for(i=0; i<=even1.length;i++){
+                if( i%2 == 0){
+
+                    even1[i].textContent = i;
+                }
+            }
+        }
+        function odd(){
+            var odd1 = document.getElementsByTagName("p");
+            for(i=0 ; i<=odd1.length;i++){
+                if( i%2 != 0){
+
+                    odd1[i].textContent = i;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            font-size: 200%;
+        }
+        .form-grp{
+            background-color: teal;
+            font-size: 2rem;
+            margin: auto;
+            width: 70%;
+            padding: 1rem 2rem;
+        }
+        #inputName{
+            border: none;
+            background: none;
+            border-bottom: 2px dotted chocolate;
+            margin-left: 1rem;
+            outline: none;
+            font-size: inherit;
+            color: beige;
+        }
+        #btn{
+            padding: 1rem 2.5rem;
+            margin-top: 1.5rem;
+            font-size: inherit;
+            font-weight: bold;
+            outline: none;
+            border: 1px solid green;
+            border-radius: 4px;
+            background: brown;
+            color: yellow;
+            cursor: pointer;
+        }
+        #btn:hover{
+            background-color: aqua;
+        }
+        .display{
+            margin: 1.5rem;
+
+        }
+    </style>
+</head>
+<body>
+    <form action="#" class="form-grp">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" id="inputName">
+
+        <input type="submit" value="Sign in" name="" id="btn">
+        <p class="display"></p>
+    </form>
+    <script>
+
+        var form = document.querySelector('.form-grp');
+        var inputName = document.querySelector('#inputName');
+        var btnSubmit = document.querySelector("#btn");
+        var display = document.querySelector('.display');
+
+        form.addEventListener('submit',function (event){
+            event.preventDefault();
+            display.textContent = inputName.value;
+            console.log(event);
+        });
+
+        inputName.addEventListener('input',function(event){
+            display.textContent = inputName.value;
+        });
+
+        inputName.addEventListener('focus',function(event){
+            event.target.style.backgroundColor = "green";
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Background Changer</title>
+        <style>
+            button{
+                font-size: large;
+                padding:12px 12px 13px 7px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: rgb(8, 54, 54);
+                background-color: rgb(112, 174, 123);
+                cursor:pointer;
+            }
+            .container{
+                padding-left: 39rem;
+                padding-top: 16rem;
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="container">
+
+            <button id="btn">Color Changer</button>
+        </div>
+        <script>
+            var button = document.getElementById("btn");
+             var body = document.body;
+            var colors = ['red','green','blue','brown','yellow','violet','indigo'];
+            button.addEventListener('click',changeBg)
+l
+            function changeBg (){
+                var colorIndex = Math.floor(Math.random() * colors.length)
+                body.style.backgroundColor = colors[colorIndex]
+            }
+        </script>
+    </body>
+    </html>

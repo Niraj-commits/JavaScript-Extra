@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 600px;
+            height: 400px;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+        }
+        p{
+            width: 400px;
+            height: 400px;
+        }
+        .hidden{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="display">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, doloremque. Corrupti architecto, aut cumque unde odit dolorum. Voluptatem tempore voluptate, magnam excepturi natus praesentium repellendus dolores cum et modi ex aut impedit earum magni repudiandae perferendis necessitatibus. Eius enim maiores quis beatae delectus qui repudiandae maxime, iusto autem ipsa quod.
+        </p>
+        <img src="wallpaperflare.com_wallpaper.jpg" class="show">
+    </div>
+    <script>
+        var disp = document.querySelector(".display");
+        
+        disp.addEventListener('click', function(e){
+            disp.className = "hidden";
+            disp.classList.toggle('hidden');
+        })
+    </script>
+        </body>
+</html>

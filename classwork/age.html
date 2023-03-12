@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <h1> Age Group Title</h1>
+</head>
+<body>
+    <label for="age1">Age</label>
+    <input type="number" id="ag" onkeyup="ageGroup()" >
+    <p id="display"></p>
+    <script>
+        function ageGroup(){
+            var age = document.getElementById('ag').value;
+
+            if ( age < 0 && age > 100 ){
+                document.getElementById('display').innerText = " The Age " +age + " is invalid"; 
+            }
+            else if ( age > 0 && age < 12){
+                document.getElementById('display').innerText = " The Age " +age + " is a Child ";
+            }
+            else if ( age >= 12 && age< 19 ){
+                document.getElementById('display').innerText = " The Age " +age + " is a Teenager";
+            }
+            else if ( age >=19 && age < 35){
+                document.getElementById('display').innerText = " The Age "  +age + " is an Adult";
+            }
+            else if ( age >=35 && age < 55) {
+                document.getElementById('display').innerText =  " The Age " +age+ " is Middle-Aged";
+            }
+            else if(age >55 && age <100){
+                document.getElementById('display').innerText = " The Age " +age+ " is Old";
+            }
+            else {
+                document.getElementById('display').innerText = " The Age " +age+ " is invalid";
+            }
+        }
+    </script>
+</body>
+</html>

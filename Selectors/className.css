@@ -1,0 +1,26 @@
+* {
+    margin :auto;
+    padding : 3px;
+    box-sizing: border-box;
+    background-color: #D2FAE0;
+}
+   #container{
+      border: 1px solid black;
+      margin: auto;
+      width: 500px;
+      height: 400px;
+      padding-top:45px;
+      padding-bottom: 45px;
+      background-color: rgb(50, 156, 160);
+   }
+
+ .btn {
+   display : block;
+    width : 300px;
+    height: 80px;
+    margin : auto;
+    padding : 5px;
+    border-radius: 7px;
+    -webkit-text-fill-color:#353861;  
+    font-size: medium;
+ }

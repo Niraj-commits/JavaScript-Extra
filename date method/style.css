@@ -1,0 +1,36 @@
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    background: rgba(215, 223, 221, 0.9);
+}
+
+.Wrapper{
+    display: flex;
+    justify-content: center;
+    background: rgba(17, 161, 120, 0.581);
+    margin: 1rem;
+}
+.container{
+    padding-left: 4px;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
+    font-family: sans-serif;
+}
+.Fdate{
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    font-size: 150%;
+    font-family: sans-serif;
+}
+
+

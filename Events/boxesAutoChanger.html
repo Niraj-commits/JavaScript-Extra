@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <h1>Random Color Changer</h1>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box; 
+      }
+      h1 {
+        font-size: 400%;
+        padding-left: 350px;
+        /* color: aliceblue; */
+      }
+      div {
+        display: flex;
+        /* display: grid; */
+        flex-wrap: wrap;
+        padding-left: 60px;
+        padding-top: 20px;
+      }
+      p {
+        height: 100px;
+        width: 140px;
+        /* background-color: aliceblue; */
+        border: 2px solid black;
+        margin: 18px;
+        border-radius: 16px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <script>
+      function randomColor() {
+        var h1 = document.querySelector("h1");
+        var ranColor = Math.floor(Math.random() * 16777215).toString(16);
+        h1.style.color = "#" + ranColor;
+      }
+      function randomBackground() {
+          var body = document.querySelector('body');
+          var color = Math.floor(Math.random() * 16777215).toString(16);
+          document.body.style.backgroundColor = '#' + color;
+        }
+        function randomParagraph() {
+            var para = document.querySelectorAll('p');
+
+                var pcolor = Math.floor(Math.random() * 16777215).toString(16);
+                for(i=0;i<para.length;i++){
+
+                    para[i].style.backgroundColor = '#' + pcolor;
+                }
+        }
+        setInterval(randomColor, 70);
+      setInterval(randomBackground, 80);
+      setInterval(randomParagraph,90);
+    </script>
+  </body>
+</html>

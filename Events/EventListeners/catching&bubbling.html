@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <div>
+      div
+      <form>
+        form
+        <p>paragraph</p>
+      </form>
+    </div>
+    <script>
+      for (var Domel of document.querySelectorAll("*")) {
+        Domel.addEventListener(
+          "click",
+          () => {
+            alert(`Capturing: ${Domel.tagName}`);
+          },
+          true
+        );
+
+        Domel.addEventListener(
+          "click",
+          () => {
+            alert(`Bubbling: ${Domel.tagName}`);
+          },
+          false
+        );
+      }
+    </script>
+  </body>
+</html>

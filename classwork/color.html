@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            font-size: 62.5%;
+        }
+
+        p{
+            font-size: 600%;
+        }
+
+        /* div{
+            padding-left: 40rem;
+            padding-top: 12rem;
+        } */
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="display"></p>
+    </div>
+    <script>
+        var para = document.getElementById("display");
+        var alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]; 
+
+        function randomAlpha(){
+
+            for(i=0;i<alphabet.length;i++){
+                para.textContent = alphabet[i];
+                i= Math.floor(Math.random()*26)
+            }
+        }
+
+        function randomColor(){
+            var body = document.querySelector('body');
+            var color = Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = '#' + color;
+
+        }
+        setInterval(randomAlpha,1000);
+        setInterval(randomColor,100);
+
+    </script>
+</body>
+</html>
+ 
+

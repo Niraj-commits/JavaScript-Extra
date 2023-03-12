@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <h1> Even or odd</h1>
+</head>
+<body>
+   <label for="text">Enter Number</label></br>
+   <input type="number" id="check" name="number" onkeyup="isCheck()">
+   <span id="msg"></span>
+   <script>
+    function isCheck(){
+        var num= document.getElementById('check').value;
+    
+        if( (num % 2) === 0 ){
+            document.getElementById('msg').innerHTML = +num+" is an even number";
+        }
+        else{
+            document.getElementById('msg').innerHTML = +num+" is an odd number";
+        }
+
+        if(num == ""){
+            document.getElementById('msg').innerHTML = "";
+        }
+        
+    }
+   </script>
+</body>
+</html>

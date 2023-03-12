@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <h1>Progress Card report</h1>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <h3>Richard's report card </h3>
+            <th> S.N </th>
+            <th>Subjects</th>
+            <th>Obt Marks</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Maths</td>
+            <td><input type="number" id="sub1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Science</td>
+            <td><input type="number" id="sub2"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Social</td>
+            <td><input type="number" id="sub3"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Health</td>
+            <td><input type="number" id="sub4"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Grammar</td>
+            <td><input type="number" id="sub5"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>English</td>
+            <td><input type="number" id="sub6"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>G.K</td>
+            <td><input type="number" id="sub7"></td>
+        </tr>
+    </table>
+    <input type="button" value="submit" id="btn" onclick="display()">
+    <p id="show"></p>
+    <p id="per"></p>
+    <p id="result"></p>
+
+    <script>
+        
+       function display(){
+        var math = document.getElementById('sub1').value;
+        var scien = document.getElementById('sub2').value;
+        var soc = document.getElementById('sub3').value;
+        var hel = document.getElementById('sub4').value;
+        var gra = document.getElementById('sub5').value;
+        var eng = document.getElementById('sub6').value;
+        var gk = document.getElementById('sub7').value;
+
+
+            const total = parseInt(math)+parseInt(scien)+parseInt(soc)+parseInt(hel)+parseInt(gra)+parseInt(eng)+parseInt(gk);
+            const percen = parseFloat(total)/700 * 100;
+            document.getElementById('show').innerHTML= "You obtained " +total+ " Marks";
+            document.getElementById('per').innerHTML= "Your percentage is " +percen+ " Percent";
+            if( math >=32 && scien >=32 && hel >=32 && gra >=32 && eng >=32 && gk >=32 ){
+                document.getElementById('result').innerHTML = "YOU PASSED";
+            }
+            else{
+                document.getElementById('result').innerHTML = "YOU FAILED";
+            }
+       }
+    </script>
+</body>
+
+</html>
